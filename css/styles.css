@@ -1095,7 +1095,7 @@ button {
   opacity: 0;
 
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1235,4 +1235,32 @@ button {
   background-color: var(--secondary-black-text-color);
   fill: var(--primary-white-color);
   border: transparent;
+}
+
+.page-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 3px;
+  appearance: none;
+  border: 0; }
+  @media (min-width: 768px) {
+    .page-progress {
+      height: 5px; } }
+
+.page-progress::-webkit-progress-bar {
+  background: transparent;
+  opacity: 1; }
+
+.page-progress::-webkit-progress-value {
+  background: #4D5AE5; }
+
+  ::selection {
+  background-color: rgba(77, 90, 229, 0.8);
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
